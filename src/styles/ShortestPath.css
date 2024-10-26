@@ -1,0 +1,246 @@
+/* Header */
+.header {
+    color: #ffffff;
+    text-align: center;
+    padding: 0;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 100%;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #e1eaf5;
+}
+
+/* Calculator Card */
+.calculator-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 860px;
+    height: auto;
+    margin: 0 auto;
+    background-color: #f3f8fe;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    position: relative;
+}
+
+.calculator-card .select-path {
+    flex: 1;
+    padding: 0.5rem 1.5rem 1.5rem;
+    background-color: #ffffff;
+}
+
+.calculator-card .illustration {
+    flex: 1;
+    padding: 0.5rem 1.5rem 1.5rem;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.calculator-card .results {
+    flex: 1;
+    padding: 0.5rem 1.5rem 1.5rem;
+    background-color: #F2F3F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Select Path Section */
+.select-path {
+    flex: 1;
+}
+
+.select-path h2 {
+    color: #1a4a83;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.select-path label {
+    font-weight: 500;
+    color: #333333;
+}
+
+.select-path select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Results Section */
+.results h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a4a83;
+    margin-bottom: 1rem;
+}
+
+.results-container {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 0.5rem 1.5rem 1.5rem;
+    color: #333333;
+    font-size: 1rem;
+}
+
+.status-message{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.clear-button {
+    background-color: #ffffff;
+    color: #c46b43;
+    border: 1px solid #c46b43;
+    padding: 0.8rem 1.5rem;
+    font-weight: 300;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.calculate-button {
+    background-color: #c46b43;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-weight: 300;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculate-button img {
+    margin-left: 0.5rem;
+}
+
+.clear-button:hover,
+.calculate-button:hover {
+    opacity: 0.9;
+}
+
+.clear-button:disabled,
+.calculate-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Error message */
+.error-message {
+    color: #ff0000;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Loader */
+.loader {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #c46b43;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+.loader-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Popup */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    position: relative;
+    max-width: 50%;
+    max-height: 80%;
+    overflow: auto;
+}
+
+.close-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.close-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.graph-image {
+    max-width: 100%;
+    height: auto;
+}

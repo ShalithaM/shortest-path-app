@@ -1,27 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div id="app">
+    <ShortestPath />
+  </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import HelloWorld from './components/HelloWorld.vue';
+import { defineComponent } from 'vue'
+import ShortestPath from '@/components/ShortestPath.vue'
 
-@Options({
+export default defineComponent({
+  name: 'App',
   components: {
-    HelloWorld,
-  },
+    ShortestPath
+  }
 })
-export default class App extends Vue {}
 </script>
 
-<style lang="scss">
+<style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+/* Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #1a4a83  40%, #e3f0ff 40%);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 </style>
